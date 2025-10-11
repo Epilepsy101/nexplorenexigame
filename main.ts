@@ -163,6 +163,16 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    music.play(music.createSoundEffect(
+    WaveShape.Square,
+    400,
+    600,
+    255,
+    205,
+    100,
+    SoundExpressionEffect.None,
+    InterpolationCurve.Linear
+    ), music.PlaybackMode.InBackground)
     if (mySprite.isHittingTile(CollisionDirection.Bottom)) {
         mySprite.vy = -200
         animation.runImageAnimation(
@@ -180,7 +190,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         false
         )
     }
-    music.play(music.createSoundEffect(WaveShape.Square, 400, 600, 255, 0, 100, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     if (mySprite.isHittingTile(CollisionDirection.Bottom)) {
