@@ -646,8 +646,6 @@ DOOOMSDAY = 0
 ScreenshakeStrenght = 2
 let AbsoluteDOOOMSDAY = 0
 game.setGameOverScoringType(game.ScoringType.HighScore)
-music.play(music.stringPlayable("C G E - C - D A ", 160), music.PlaybackMode.LoopingInBackground)
-music.play(music.stringPlayable("C5 B C5 - G - F - ", 160), music.PlaybackMode.LoopingInBackground)
 game.onUpdateInterval(5000, function () {
     GameUpdate += GameUpdate * -1 / 5
     Speedmultiplier += 0.1
